@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyTeam - Gestión</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- Estilos propios -->
+  <link rel="icon" href="/images/football-field_414532.png">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+  <div>
+    <nav class="container">
+      <h1 class="title-section rounded-bottom text-center p-2">Administrar mi equipo</h1>
+      <button class="options radius">
+        <a href="/index.html">Volver al inicio</a>
+      </button>
+      <button class="options radius" onclick="playersList()">Listar jugadores</button>
+      <button class="options radius" onclick="completeInformation()">Datos de mi plantel</button>
+      <button class="options radius" onclick="changePlayer()">Realizar cambio durante el partido</button>
+      <button class="options radius" onclick="emptyTeam()">Despedir plantel</button>
+    </nav>
+  </div>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-lg-6 form-container">
+        <form id="formTask" name="formTask">
+          <div class="mb-4">
+            <label for="playerName" class="form-label pl-1">Nombre del jugador:</label>
+            <input type="text" class="form-control" placeholder="Ingresá el nombre del jugador" id="playerName" required>
+            <div id="help" class="form-text text-danger opacity-25 pl-1">Se verá reflejado en la opción "Listar jugadores"</div>
+          </div>
+          <div class="mb-4">
+            <label for="playerLastName" class="form-label pl-1">Apellido del jugador:</label>
+            <input type="text" class="form-control" placeholder="Ingresá el apellido del jugador" id="playerLastName" required>
+          </div>
+          <div class="mb-3">
+            <label for="playerAge">Edad:</label>
+            <input type="number" min="16" max="45" id="playerAge" required>
+          </div>
+          <label for="position">Posición:</label>
+          <select id="position" class="mb-3 form-control" required>
+            <option value="Arquero">Arquero</option>
+            <option value="Defensor">Defensor</option>
+            <option value="Mediocampista">Mediocampista</option>
+            <option value="Delantero">Delantero</option>
+          </select>
+          <div class="mt-4 form-check mt-5">
+            <input name="state" type="radio" class="form-check-input" id="starter">
+            <label class="pr-5" for="starter">Titular</label>
+            <input name="state" type="radio" class="form-check-input" id="substitute" checked>
+            <label for="substitute">Suplente</label>
+          </div>
+          <div class="row justify-content-center mt-4">
+            <button type="submit" class="btn btn-primary" onclick="addPlayer(event)">Agregar jugador</button>
+          </div>
+        </form>
+      </div>
+      <div class="content col-lg-6">
+        <div class="align-items-center justify-content-center" id="container-team">
+          <img class="background-image-team" src="/images/undraw_no_data_re_kwbl.svg" alt="">
+        </div>
+      </div>
+  </div>
+  <section id="section-team" class="primary-font">
+    <div class="pt-5 d-flex justify-content-center align-items-center flex-column">
+      <h1 class="m-5">Mi Plantel|Panel administrativo</h1>
+      <div id="sort-team" class="container-sort-team">
+        <img id="data" src="/images/undraw_team_up_re_84ok.svg" alt="">
+
+      </div>
+    </div>
+  </section>
+  <script src="js/app.js"></script>
+</body>
+</html>

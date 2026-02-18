@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+@font-face{
+  font-family: 'jacksonville';
+  src: url(/css/fonts/NFL_Jacksonville_Jaguars[1].ttf) format('truetype'); /* Se formatea para poder utilizarla en Javascript con el nombre y no la ruta.  */
+
+}
+
+:root{
+  --font-form: 'Audiowide', sans-serif;
+  --primary-font: 'jacksonville';
+
+}
+
+.primary-font{
+  font-family: var(--primary-font);
+
+}
+
+html, body{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+}
+
+body{
+  background-image: url('/images/undraw_game_day_ucx9.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+}
+
+nav{
+  font-family: 'jacksonville';
+
+}
+
+.title-section{
+  color: #1E2025;
+  background-color: #F2E9DC;
+  border: 2px solid black;
+
+}
+
+.options{
+  font-size: 20px;
+  border-radius: 5px;
+  text-decoration: none;
+
+}
+
+a:hover{
+  text-decoration: none;
+
+}
+
+button:hover{
+  background-color: #808F85;
+
+}
+
+.form-container{
+  font-family: var(--font-form);
+
+}
+
+.content{
+  min-height: 500px;
+  max-height: 500px;
+  overflow-y: hidden;
+
+}
+
+#container-team{
+  border: 4px double rgb(5, 113, 39);
+  margin-bottom: 10px;
+  background-color: #c7c2ba;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  position: relative;
+  display: flex;
+
+}
+
+table{
+  min-width: 100%;
+  max-width: 100%;
+
+}
+
+.background-image-team{
+  width: 50%;
+  height: 50%;
+
+}
+
+#section-team{
+  width: 100%;
+  min-height: 700px;
+  text-align: center;
+
+}
+
+.container-sort-team{
+  width: 100%;
+
+}

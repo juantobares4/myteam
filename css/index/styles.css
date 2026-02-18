@@ -1,0 +1,68 @@
+@font-face{
+  font-family: 'jacksonville';
+  src: url(/css/fonts/NFL_Jacksonville_Jaguars[1].ttf);
+
+}
+
+@font-face{
+  font-family: 'high-school';
+  src: url(/css/fonts/High\ School\ USA\ Serif.ttf);
+
+}
+
+html, body{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+}
+
+body{
+  font-family: 'high-school';
+  background-image: url('/images/pexels-tomfisk-3448250.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.icon{
+  width: 120px;
+  height: 120px;
+  margin-right: 10px;
+
+}
+
+.color-text{
+  color: #1B1B2E;
+
+}
+
+button{
+  width: 200px;
+  margin-left: 90px;
+
+}
+
+.text-button{
+  font-weight: bold;
+  font-family: 'jacksonville';
+  
+}
+
+a{
+  letter-spacing: 0.1em;
+  color: white;
+  
+}
+
+a:hover{
+  color: #1B1B2E;
+  text-decoration: none;
+
+}
